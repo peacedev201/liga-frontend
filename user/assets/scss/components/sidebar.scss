@@ -1,0 +1,20 @@
+.lsh_sidebar {
+    margin-bottom: $margin-default;
+    &__ {
+        &item {
+            margin-bottom: $margin-default;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .lsh_match-box {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, lg)) {
+    .lsh_sidebar {
+        margin-bottom: 0;
+    }
+}

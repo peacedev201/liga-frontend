@@ -1,0 +1,35 @@
+footer {
+    border-top: 3px solid $secondary-accent;
+    padding-top: $padding-default;
+    padding-bottom: $padding-default;
+    position: relative;
+    img {
+        max-width: 150px;
+    }
+}
+
+.lsh__footer-menu {
+    text-align: right;
+    li {
+        display: inline-block;
+        list-style: none;
+        color: #fff;
+        &:after {
+            content: " |";
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+                color: $secondary-accent;
+            }
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

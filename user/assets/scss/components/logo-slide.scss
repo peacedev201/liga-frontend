@@ -1,0 +1,32 @@
+.lsh_logo-slide {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__ {
+        &item {
+            width: 50%;
+            align-self: center;
+            img {
+                max-width: 80%;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, md)) {
+    .lsh_logo-slide {
+        @include flex();
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__ {
+            &item {
+                width: 25%;
+                img {
+                  max-width: 85%;
+                }
+            }
+        }
+    }
+}

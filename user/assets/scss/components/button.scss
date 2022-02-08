@@ -1,0 +1,144 @@
+.lsh_btn {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    @include transition(background-color, 0.3s);
+    :hover {
+        @include transition(background-color, 0.3s);
+    }
+    i, svg {
+        position: relative;
+        top: -2px;
+    }
+    &-- {
+        &circle-medium {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            border-radius: 50px;
+            i, svg {
+                position: relative;
+                top: 0px;
+                left: -2px;
+            }
+        }
+        &primary-accent {
+            background-color: $primary-accent;
+            color: #fff;
+            &:hover {
+                background-color: $secondary-accent;
+                color: #fff;
+                i, svg {
+                    color: #fff;
+                }
+            }
+        }
+        &primary {
+            padding: 5px 15px;
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: $primary-accent;
+            font-weight: 300;
+            color: #fff;
+            @include transition(background-color, 0.3s);
+            i, svg {
+                font-size: 12px !important;
+                margin-left: 3px;
+            }
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+                background-color: $secondary-accent;
+                @include transition(background-color, 0.3s);
+            }
+        }
+        &block {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        &primary-small {
+            padding: 3px 10px;
+            font-size: 12px;
+            border-radius: 50px;
+            background-color: $primary-accent;
+            font-weight: 300;
+            color: #fff;
+            @include transition(background-color, 0.3s);
+            i, svg {
+                font-size: 12px;
+                margin-left: 3px;
+            }
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+                background-color: darken($primary-accent, 20%);
+                @include transition(background-color, 0.3s);
+            }
+        }
+        &round {
+            border-radius: 150px;
+        }
+        &flat-white {
+            padding: 10px 5px;
+            color: #fff;
+            border-radius: 50px;
+            @include transition(background-color, 0.3s);
+            &:hover {
+                @include transition(background-color, 0.3s);
+                background-color: rgba($primary-accent, 0.1);
+            }
+        }
+        &flat-grey {
+            padding: 3px 10px;
+            color: $secondary;
+            border-radius: 50px;
+            font-size: 14px;
+            @include transition(background-color, 0.3s);
+            display: inline-block;
+            &:hover {
+                @include transition(background-color, 0.3s);
+                background-color: rgba(#000, 0.1);
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+}
+
+.lsh_header__signup__dropdown {
+    button {
+        padding: 5px 15px;
+        font-size: 14px;
+        border-radius: 50px;
+        background-color: $primary-accent;
+        font-weight: 300;
+        color: #fff;
+        border: none !important;
+        @include transition(background-color, 0.3s);
+        i, svg {
+            font-size: 12px !important;
+            margin-left: 3px;
+        }
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: $secondary-accent;
+            @include transition(background-color, 0.3s);
+        }
+    }
+}
+
+.btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
+    background-color: $secondary-accent;
+}
+
+.dropdown-menu {
+    border-radius: 0 !important;
+    background-color: $primary;
+}

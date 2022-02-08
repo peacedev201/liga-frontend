@@ -1,0 +1,86 @@
+.lsh_plan {
+    display: flex;
+    overflow-x: auto;
+    &__rounds {
+        min-width: 350px;
+        .lsh_header {
+            margin-left: 5px;
+        }
+        h4 {
+            background-color: #015fff;
+            margin-bottom: 10px;
+            color: white;
+        }
+        &__match {
+            display: flex;
+            width: 100%;
+            &__players {
+                color: white;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 14px;
+                .match_number {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    width: 10%;
+                    justify-content: center;
+                    &__ {
+                        &upperline {
+                            border-top: 1px solid white;
+                            border-right: 1px solid white;
+                            position: absolute;
+                            top: 25%;
+                            left: 0;
+                            width: 50%;
+                            height: 19%;
+                        }
+                        &lowerline {
+                            border-bottom: 1px solid white;
+                            border-right: 1px solid white;
+                            position: absolute;
+                            bottom: 25%;
+                            left: 0;
+                            width: 50%;
+                            height: 18%;
+                        }
+                    }
+                }
+                .players-detail {
+                    flex-direction: column;
+                    display: flex;
+                    width: 88%;
+                    height: 100%;
+                    justify-content: center;
+                    .player {
+                        display: flex;
+                        padding-bottom: 5px;
+                        .common {
+                            display: flex;
+                            width: 14%;
+                            justify-content: center;
+                            height: 30px;
+                            align-items: center;
+                        }
+                        .points {
+                            background-color: #3e495b;
+                        }
+                        .name {
+                            background-color: #262f3e;
+                            width: 72%;
+                        }
+                        .score {
+                            background-color: #015efc;
+                        }
+                        .tbd {
+                            background-color: white;
+                            width: 100%;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

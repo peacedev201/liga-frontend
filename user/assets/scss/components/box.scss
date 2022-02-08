@@ -1,0 +1,255 @@
+.lsh_match-box {
+    background-color: $secondary;
+    padding: $padding-default;
+    text-align: center;
+    margin-bottom: $margin-default;
+    border-bottom: 3px solid $primary-accent;
+    &__ {
+        &date {
+            font-size: 15px;
+            color: #fff;
+        }
+        &event {
+            font-size: 15px;
+            color: $secondary-text;
+        }
+        &data {
+            @include flex();
+            justify-items: center;
+            justify-content: space-between;
+            &__ {
+                &result {
+                    align-self: center;
+                    font-size: 50px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+                &player {
+                    align-self: center;
+                    img {
+                        max-width: 70px;
+                        border: solid 2px $primary-accent;
+                        border-radius: 70px;
+                    }
+                }
+                &date {
+                    align-self: center;
+                    &__ {
+                        &day {
+                            display: block;
+                            font-size: 21px;
+                            font-weight: 600;
+                        }
+                        &event {
+                            font-size: 14px;
+                            color: $secondary-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--upcoming {
+        background-color: #fff;
+        .lsh_match-box {
+            &__ {
+                &date {
+                    color: $secondary;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                &data {
+                    &__ {
+                        &result {
+                            color: $primary-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--history {
+        background-color: #fff;
+        .lsh_match-box {
+            &__ {
+                &date {
+                    color: $secondary;
+                }
+                &data {
+                    &__ {
+                        &result {
+                            color: $primary-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, sm)) {
+    .lsh_match-box {
+        &__ {
+            &data {
+                &__ {
+                    &result {
+                        font-size: 70px;
+                    }
+                    &player {
+                        img {
+                            max-width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, md)) {
+    .lsh_match-list {
+        > div {
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .lsh_match-box {
+        &__ {
+            &data {
+                &__ {
+                    &result {
+                        font-size: 50px;
+                    }
+                    &player {
+                        img {
+                            max-width: 65px;
+                        }
+                    }
+                }
+            }
+        }
+        &--upcoming {
+            background-color: #fff;
+            .lsh_match-box {
+                &__ {
+                    &data {
+                        &__ {
+                            &player {
+                                img {
+                                    max-width: 60px;
+                                }
+                            }
+                        }
+                    }
+                    &date {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        &--history {
+            .lsh_match-box {
+                &__ {
+                    &data {
+                        &__ {
+                            &player {
+                                img {
+                                    max-width: 40px;
+                                }
+                            }
+                            &result {
+                                font-size: 32px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, lg)) {
+    .lsh_match-box {
+        margin-bottom: 0;
+        &__ {
+            &data {
+                &__ {
+                    &result {
+                        font-size: 70px;
+                    }
+                    &player {
+                        img {
+                            max-width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+        &--upcoming {
+            .lsh_match-box {
+                &__ {
+                    &data {
+                        &__ {
+                            &player {
+                                img {
+                                    max-width: 75px;
+                                }
+                            }
+                        }
+                    }
+                    &date {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        &--history {
+            .lsh_match-box {
+                &__ {
+                    &data {
+                        &__ {
+                            &player {
+                                img {
+                                    max-width: 60px;
+                                }
+                            }
+                            &result {
+                                font-size: 38px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: map_get($grid-breakpoints, xl)) {
+
+    .lsh_match-list {
+        > div {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .lsh_match-box {
+        &__ {
+            &data {
+                &__ {
+                    &result {
+                        font-size: 32px;
+                    }
+                    &player {
+                        img {
+                            max-width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

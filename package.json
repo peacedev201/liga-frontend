@@ -1,0 +1,53 @@
+{
+  "name": "liga",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "user:dev": "nuxt user",
+    "admin:dev": "nuxt admin",
+    "dev": "concurrently \"npm run user:dev\" \"npm run admin:dev\"",
+    "user:build": "nuxt build user",
+    "admin:build": "nuxt build admin",
+    "build": "concurrently \"npm run user:build\" \"npm run admin:build\"",
+    "user:start": "nuxt start user",
+    "admin:start": "nuxt start admin",
+    "start": "concurrently \"npm run user:start\" \"npm run admin:start\"",
+    "user:generate": "nuxt generate user",
+    "admin:generate": "nuxt generate admin",
+    "generate": "concurrently \"npm run user:generate\" \"npm run admin:generate\"",
+    "user:deploy": "push-dir --dir=user/dist --branch=build --remote=user --cleanup",
+    "admin:deploy": "push-dir --dir=admin/dist --branch=build --remote=admin --cleanup"
+  },
+  "dependencies": {
+    "@ambitiondev/vue-cookiebot-plugin": "^1.0.1",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.19.0",
+    "core-js": "^3.6.5",
+    "emoji-mart-vue": "^2.6.6",
+    "emojione": "^4.5.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.15.4",
+    "nuxt-socket-io": "^1.1.14",
+    "nuxt-validate": "^1.0.1",
+    "vue-chat-emoji": "^1.1.27",
+    "vue-owl-carousel2": "^2.0.7",
+    "vue-timeago": "^5.1.2",
+    "vue2-editor": "^2.10.2",
+    "vuetify": "^2.3.18",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "concurrently": "^5.3.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5"
+  }
+}

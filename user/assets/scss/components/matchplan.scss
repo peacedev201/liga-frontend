@@ -1,0 +1,37 @@
+.lsh_liga-table {
+    padding: $padding-default / 2;
+    text-align: center;
+    &-- {
+        &bg-light {
+            background-color: #fff;
+        }
+    }
+    table {
+        width: 100%;
+        margin-bottom: $margin-default / 2;
+        text-align: left;
+        thead {
+            border-bottom: solid 2px #000;
+            th {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: solid 1px #000;
+                td {
+                    padding: 10px 8px;
+                    font-size: 11px;
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    a {
+        margin-bottom: 10px;
+    }
+}

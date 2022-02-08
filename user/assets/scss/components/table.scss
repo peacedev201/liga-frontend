@@ -1,0 +1,25 @@
+.lsh_table {
+    &__ {
+        &profile_picture {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        &link {
+            color: $secondary;
+        }
+        &profile_detail {
+            display: flex;
+        }
+        &serial_no {
+            width: 30px;
+        }
+    }
+}
+
+.table .thead-dark th {
+    border: none !important;
+    background: $secondary !important;
+    color: #ffffff;
+}

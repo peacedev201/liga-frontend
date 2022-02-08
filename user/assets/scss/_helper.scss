@@ -1,0 +1,94 @@
+.lsh {
+    &-- {
+        &primary-bg {
+            background-color: $primary;
+        }
+        &secondary-bg {
+            background-color: $secondary;
+        }
+        &primary-accent-bg {
+            background-color: $primary-accent;
+        }
+        &secondary-accent-bg {
+            background-color: $secondary-accent;
+        }
+        &primary-accent-border-bottom {
+            border-bottom: solid 3px $primary-accent;
+        }
+    }
+}
+
+.lsh_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    &-- {
+        &gradient-primary-bottom {
+            background: linear-gradient(0deg, $primary 1%, rgba(255,0,0,0) 40%)
+        }
+    }
+}
+
+.lsh_skyscraper {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    &-- {
+        &left {
+            left: -120px;
+        }
+        &right {
+            right: -120px;
+        }
+    }
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.text {
+    &-- {
+        &white {
+            color: #fff;
+        }
+        &primary-accent {
+            color: $primary-accent;
+        }
+        &secondary-accent {
+            color: $secondary-accent;
+        }
+        &light {
+            font-weight: 300;
+        }
+        &thin {
+            font-weight: 100;
+        }
+        &center {
+            text-align: center;
+        }
+        &small {
+            font-size: 11px;
+        }
+
+    }
+}
+
+.lsh_grass_background {
+    background-image: url("../images/default-header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    min-height: 500px;
+    margin-top: 70px;
+    @media only screen and (max-width: 992px) {
+        margin-top: 40px;
+    }
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: $secondary !important;
+}

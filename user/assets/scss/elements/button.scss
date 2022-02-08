@@ -1,0 +1,33 @@
+.lsh_btn {
+    display: inline-block;
+    text-decoration: none;
+    &-- {
+        &circle-medium {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            border-radius: 50px;
+        }
+        &primary-accent {
+            background-color: $primary-accent;
+            color: #fff;
+        }
+        &primary {
+            padding: 5px 15px;
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: $primary-accent;
+            border-color: $primary-accent;
+            font-weight: 300;
+            color: #fff;
+            i {
+                font-size: 12px;
+                margin-left: 3px;
+            }
+        }
+        &round {
+            border-radius: 150px;
+        }
+    }
+}

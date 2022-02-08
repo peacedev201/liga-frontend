@@ -1,0 +1,15 @@
+@mixin transition($type, $time) {
+    -webkit-transition: $type $time;
+    -moz-transition: $type $time;
+    -o-transition: $type $time;
+    transition: $type $time;
+}
+
+@mixin flex() {
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}

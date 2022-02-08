@@ -1,0 +1,312 @@
+h1, h2, h3, h4, h5, h6, p, span, li, ul, div, a, blockquote, input, label {
+    font-family: "Sofia Pro";
+    font-weight: 600;
+}
+
+a, p, ul, li {
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.lsh_section {
+    padding-top: $padding-section * 3;
+    padding-bottom: $padding-section * 3;
+    position: relative;
+    z-index: 20;
+    &-- {
+        &small {
+            padding-top: $padding-section;
+            padding-bottom: $padding-section;
+        }
+        &no-padding {
+            padding: 0;
+        }
+        &no-top-padding {
+            padding-top: 0;
+        }
+        &no-bottom-padding {
+            padding-bottom: 0;
+        }
+        &page {
+            padding-bottom: $padding-section;
+            padding-top: $padding-section;
+        }
+        &account {
+            padding-bottom: $padding-section;
+            padding-top: $padding-section;
+            background-color: #fff;
+        }
+        &scoresheet {
+            padding-bottom: $padding-section;
+            padding-top: 0;
+        }
+    }
+}
+
+
+
+.lsh_title {
+    padding: $padding-default / 2 $padding-default;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+    &-- {
+        &no-margin-bottom {
+            margin-bottom: 0;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.lsh_img {
+    &-- {
+        &resp {
+            max-width: 100%;
+        }
+        &block {
+            display: block;
+        }
+        &circle {
+            border-radius: 500px;
+        }
+        &center {
+            margin: auto;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-color {
+    &-- {
+        &accent {
+            color: $primary-accent;
+        }
+    }
+}
+
+.lsh_divider {
+    height: 1px;
+    background-color: rgba($secondary, 0.5);
+    width: 100%;
+    margin-top: $margin-default / 2;
+    margin-bottom: $margin-default / 2;
+}
+
+.lsh_content {
+    padding: 20px;
+    &-- {
+        &secondary-bg {
+            background-color: $secondary;
+            * {
+                color: #fff;
+            }
+            p {
+                color: $secondary-text;
+                font-size: 12px;
+            }
+        }
+        &white-bg {
+            background-color: #fff;
+            p {
+                color: $secondary-text;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: map_get($grid-breakpoints, md)) {
+    .lsh_section {
+        &-- {
+            &page {
+                margin-top: -120px;
+                min-height: 700px;
+            }
+            &account {
+                margin-top: -120px;
+            }
+            &scoresheet {
+                margin-top: -120px;
+                min-height: 700px;
+            }
+        }
+    }
+}
+
+.search-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    label {
+      position: absolute;
+      font-size: 12px;
+      color: rgba(0,0,0,.50);
+      top: 8px;
+      left: 12px;
+      z-index: -1;
+      transition: .15s all ease-in-out;
+    }
+    input {
+      padding: 5px 15px;
+      color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: .15s all ease-in-out;
+    //   background: white;
+      &:focus {
+        outline: none;
+        transform: scale(1.05);
+        & + label  {
+          font-size: 10px;
+          transform: translateY(-24px) translateX(-12px);
+        }
+      }
+      &::-webkit-input-placeholder {
+          font-size: 15px;
+          color: #ccc;
+          font-weight: 100;
+      }
+    }
+    .search-icon {
+        color: white;
+        padding: 5px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 5px;
+      }
+  }
+
+.settingbar{
+    display: flex; 
+    justify-content: space-between;
+    .search-wrapper {
+        position: relative;
+        margin-bottom: 10px;
+        label {
+          position: absolute;
+          font-size: 12px;
+          color: rgba(0,0,0,.50);
+          top: 8px;
+          left: 12px;
+          z-index: -1;
+          transition: .15s all ease-in-out;
+        }
+        input {
+          padding: 5px 15px;
+          color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          transition: .15s all ease-in-out;
+        //   background: white;
+          &:focus {
+            outline: none;
+            transform: scale(1.05);
+            & + label  {
+              font-size: 10px;
+              transform: translateY(-24px) translateX(-12px);
+            }
+          }
+          &::-webkit-input-placeholder {
+              font-size: 15px;
+              color: #ccc;
+              font-weight: 100;
+          }
+        }
+        .search-icon {
+            color: white;
+            padding: 5px;
+            border: solid;
+            border-width: 1px;
+            border-radius: 5px;
+          }
+      }
+    
+      .aselect {
+        width: 75px;
+        // margin: 20px auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        .selector {
+            border: 1px solid gainsboro;
+            width: 75px;
+            background: #F8F8F8;
+            position: relative;
+            z-index: 1;
+            border-radius: 5px;
+            .arrow {
+                position: absolute;
+                right: 10px;
+                top: 40%;
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 10px solid #888;
+                transform: rotateZ(0deg) translateY(0px);
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
+            }
+            .expanded {
+                transform: rotateZ(180deg) translateY(2px);
+            }
+            .label {
+                display: block;
+                padding: 5px 12px;
+                font-size: 16px;
+                color: #888;
+            }
+        }
+        ul {
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            border: 1px solid gainsboro;
+            position: absolute;
+            z-index: 1;
+            background: #fff;
+        }
+        li {
+            padding: 5px 12px;
+            color: #666;
+            &:hover {
+                color: white;
+                background: seagreen;
+            }
+        }
+        .current {
+            background: #eaeaea;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
+    }
+}
+
+.pagination{
+    justify-content: center;
+    .page-item{
+        display: flex;
+        color: #015fff;
+        :disabled {
+            color: grey;
+        }
+    }
+}
+
+
+
+
